@@ -28,7 +28,7 @@ Funcion results <- comprobar_score (a)  // Funcion que comprueba el porcentaje d
 	
 Fin Funcion
 
-Funcion rules_accept <- Rules_verification () // Funcion que no retorna ningun valor solamente ejecuta el codigo.
+Funcion rules_accept <- Rules_verification () // Funcion, que no retorna ningun valor solamente ejecuta el codigo.
 	Definir rules_validation Como Caracter
 	Repetir // Se abre un do-while, para asegurar que el usuario cheque las reglas 
 		Escribir "========================================="
@@ -48,7 +48,6 @@ Funcion rules_accept <- Rules_verification () // Funcion que no retorna ningun v
 		Limpiar Pantalla
 		
 		Si rules_validation <> "s" // Si la variable no es igual a "s" se va a seguir ejecutando el codigo
-			
 		FinSi
 		
 	Hasta Que rules_validation = "s" // Hasta que rules_validation sea igual a "s" se rompe el ciclo
@@ -113,13 +112,14 @@ Algoritmo Trivia_game_mejorado
 						Escribir "a) China"
 						Escribir "b) Reino Unido"
 						Escribir "c) Rusia"
-						Leer question_1_easy // Se abre un input para que el usuario pueda insertar la respuesta
+						Leer question_1_easy // Se abre un input para que el usuario pueda insertar la respuesta.
 						
 						Si question_1_easy = "c" Entonces // Checa que la repuesta que esta en la variable, sea igual y si es igual imprime por pantalla la expresion
 							Escribir ""
 							Escribir "¡Correcta!"
 							Escribir ""
-							score = score  +100 // Si la respuesta es correcta se le suma el valor actual del score + 100 puntos cada vez que la pregunta sea correcta
+							score = score  +100 // Si la respuesta es correcta se le suma el valor actual del score + 100 puntos cada vez que la pregunta sea correcta, y todo este proceso se repite en todas las preguntas.
+		
 						SiNo
 							Escribir ""
 							Escribir "¡Incorrecta!"
@@ -127,7 +127,8 @@ Algoritmo Trivia_game_mejorado
 						Fin Si
 						
 						Esperar 1 Segundos
-						Limpiar Pantalla // Entre cada pregunta hay un intervalo de 1 segundo despues de eso se limpia la pantalla
+						Limpiar Pantalla // Entre cada pregunta hay un intervalo de 1 segundo despues de eso se limpia la pantalla.
+						
 						
 						// Question 2
 						Escribir "¿Cuantos huesos tiene el cuerpo humano?"
@@ -381,8 +382,19 @@ Algoritmo Trivia_game_mejorado
 			Hasta Que exit_op = "n"
 			
 			Limpiar Pantalla
-			Escribir "Gracias por jugar, ¡Nos vemos pronto!"
-			Esperar 1 segundo
+			Escribir "Gracias ", name " por jugar, ¡Nos vemos pronto!"
+			
+			Esperar 1 Segundos
+			Limpiar Pantalla
+			
+			Escribir "Atte:"
+			Escribir "Anna Victoria Urrea Márquez"
+			Escribir "Alejandro Favela Gómez"
+			Escribir "Ana Lucía Camarena Campos"
+			Escribir "Ali Duarte Gaxiola"
+			Escribir "Graciassss!"
+			
+			Esperar 2 segundo
 			Limpiar Pantalla
 			
 		FinSi
@@ -412,12 +424,28 @@ Algoritmo Trivia_game_mejorado
 	Hasta Que menu_option_exit = "n"
 	
 	Limpiar Pantalla
+	Escribir "Gracias ", name " por jugar, ¡nos vemos pronto!"
+	
+	Esperar 1 Segundos
+	Limpiar Pantalla
 	
 	// Cierra el programa
 	Si user_op = 3
 		Limpiar Pantalla
-		Escribir "Gracias por jugar, ¡nos vemos pronto!"
-		Esperar 1 segundos
+		Escribir "Gracias ", name " por jugar, ¡nos vemos pronto!"
+		
+		Esperar 1 Segundos
+		Limpiar Pantalla
+		
+		Escribir ""
+		Escribir "Atte:"
+		Escribir "Anna Victoria Urrea Márquez"
+		Escribir "Alejandro Favela Gómez"
+		Escribir "Ana Lucía Camarena Campos"
+		Escribir "Ali Duarte Gaxiola"
+		Escribir "Graciassss!"
+		
+		Esperar 3 segundos
 		Limpiar Pantalla
 	FinSi
 FinAlgoritmo
